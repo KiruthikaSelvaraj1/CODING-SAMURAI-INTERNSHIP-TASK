@@ -1,0 +1,6 @@
+# No external dependencies required for this basic chatbot
+# This project uses only Python standard library modules:
+# - datetime
+# - random
+
+# Python version: 3.x
