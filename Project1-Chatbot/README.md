@@ -34,6 +34,7 @@ A **rule-based support chatbot** created using predefined rules and regex patter
 ✅ **Multiple Intent Handlers** (separate methods for each intent)  
 ✅ **Random Response Variation** (uses `random.choice()` for conversational variety)  
 ✅ **Clean & Modular Code Structure** (easy to extend and maintain)  
+✅ **Web UI Option** (simple HTML/CSS/JS interface)
 
 ### Chatbot Capabilities
 - 🎭 Greeting responses (hello, hi, hey, greetings, welcome)
@@ -54,6 +55,7 @@ A **rule-based support chatbot** created using predefined rules and regex patter
 - **re (Regular Expressions)** - Pattern matching for intent detection
 - **datetime** - Time-related queries
 - **random** - Response variation
+- **HTML/CSS/JavaScript** - Web UI interface
 - **No external dependencies** - Uses only Python standard library
 
 ---
@@ -63,10 +65,10 @@ A **rule-based support chatbot** created using predefined rules and regex patter
 ```
 Project1-Chatbot/
 ├── chatbot.py          # Main SupportBot class with all logic
-├── test_chatbot.py     # Automated test suite (13 test cases)
+├── index.html          # Simple web UI interface
+├── test_chatbot.py     # Automated test suite
 ├── README.md           # Documentation
-├── requirements.txt    # Dependencies (none required)
-└── __pycache__/        # Python cache files
+└── requirements.txt    # Dependencies (none required)
 ```
 
 ---
@@ -77,11 +79,17 @@ Project1-Chatbot/
 - Python 3.x installed on your system
 - No external packages required (standard library only)
 
-### Interactive Chatbot
+### Option 1: Web UI (Recommended - Simple Interface)
+```bash
+# Open index.html in any web browser
+# Or simply double-click index.html file
+```
+
+### Option 2: Console (Interactive)
 ```bash
 python chatbot.py
 ```
-Start a live interactive chat session with the bot.
+Start a live interactive chat session with the bot in the terminal.
 
 ### Run Test Suite
 ```bash
@@ -93,11 +101,8 @@ Execute automated tests to see all chatbot features in action.
 
 ## 💬 Example Interactions
 
+### Web UI / Console
 ```
-╔════════════════════════════════════════════════════════════════╗
-║           INTERACTIVE CHATBOT CONVERSATION                     ║
-╚════════════════════════════════════════════════════════════════╝
-
 You: Hello
 Bot: Hi there! Great to meet you. What can I assist with?
 
@@ -173,7 +178,7 @@ def __init__(self):
 
 ## 📊 Test Results
 
-13 comprehensive test cases demonstrating all features:
+Comprehensive test cases demonstrating all features:
 ```
 ✓ Greeting recognition
 ✓ Bot identity queries
@@ -185,7 +190,6 @@ def __init__(self):
 ✓ Exit command recognition
 ✓ Varied responses
 ✓ Unknown input handling
-✓ And more...
 ```
 
 Run `python test_chatbot.py` to see full test output.
@@ -220,6 +224,7 @@ Through this project, I have learned and applied:
 - ✅ Random selection for response variety
 - ✅ Time handling with datetime module
 - ✅ Code modularity and maintainability
+- ✅ Web development basics (HTML/CSS/JS)
 
 ---
 
@@ -230,7 +235,6 @@ Through this project, I have learned and applied:
 - Implement conversation history/persistence
 - Add context awareness for follow-up questions
 - Integrate with external APIs
-- Build a GUI interface (Tkinter/PyQt)
 - Add machine learning for intent classification
 - Implement conversation logging
 - Add multi-language support
@@ -272,4 +276,5 @@ Created as part of the **Coding Samurai AI Internship Program (Level 1 - Beginne
 ---
 
 **Status:** ✅ Project Completed and Published  
-**Last Updated:** February 19, 2026
+
+
