@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Caption Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Centered Content Wrapper -->
+        <div class="content-wrapper">
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <div class="container-lg">
+                    <div class="navbar-brand">
+                        <i class="fas fa-image"></i>
+                        <span>AI Caption Generator</span>
+                    </div>
+                    <div class="nav-version">v2.0</div>
+                </div>
+            </nav>
+
+            <!-- Header Section -->
+            <div class="header-section">
+                <h1 class="main-title">
+                    <i class="fas fa-sparkles"></i> Image Caption Generator
+                </h1>
+                <p class="main-subtitle">
+                    Powered by AI - Transform your images into intelligent descriptions
+                </p>
+            </div>
+
+            <!-- Main Content -->
+            <div class="row g-4 justify-content-center">
+                <!-- Left Column: Upload Section -->
+                <div class="col-lg-5">
+                    <div class="glass-card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-cloud-upload-alt"></i> Upload Image
+                            </h5>
+
+                            <!-- Upload Area -->
+                            <div class="upload-area" id="uploadArea">
+                                <div class="upload-content">
+                                    <i class="fas fa-image"></i>
+                                    <p class="upload-text">Drag your image here or click to browse</p>
+                                    <p class="upload-subtext">Supported: PNG, JPG, JPEG, GIF, BMP (Max 16MB)</p>
+                                </div>
+                                <input 
+                                    type="file" 
+                                    id="imageInput" 
+                                    class="upload-input" 
+                                    accept="image/*"
+                                    style="display: none;"
+                                >
+                            </div>
+
+                            <!-- Image Preview -->
+                            <div id="previewSection" class="preview-section d-none mt-4">
+                                <img id="previewImage" class="preview-image" alt="Preview">
+                                <button class="btn btn-sm btn-secondary mt-2" id="clearBtn">
+                                    <i class="fas fa-times"></i> Clear
+                                </button>
+                            </div>
+
+                            <!-- Upload Button -->
+                            <button 
+                                id="uploadBtn" 
+                                class="btn btn-primary btn-lg w-100 mt-4" 
+                                disabled
+                            >
+                                <i class="fas fa-wand-magic-sparkles"></i> Generate Caption
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Results Section -->
+                <div class="col-lg-5">
+                    <div class="glass-card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-lightbulb"></i> AI Generated Caption
+                            </h5>
+
+                            <!-- Loading State -->
+                            <div id="loadingState" class="text-center d-none">
+                                <div class="spinner-border text-primary mb-3" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p class="text-muted mb-0">Analyzing your image with AI...</p>
+                            </div>
+
+                            <!-- Result State -->
+                            <div id="resultState" class="result-state d-none">
+                                <div class="caption-box">
+                                    <div class="caption-label">Generated Caption:</div>
+                                    <p id="captionText" class="caption-text"></p>
+                                </div>
+
+                                <!-- Stats -->
+                                <div class="stats-container">
+                                    <div class="stat-item">
+                                        <i class="fas fa-file-image"></i>
+                                        <span id="statFilename" class="stat-value"></span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span id="statTime" class="stat-value"></span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <i class="fas fa-font"></i>
+                                        <span id="statWords" class="stat-value"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Copy Button -->
+                                <button class="btn btn-outline-primary w-100 mt-3" id="copyBtn">
+                                    <i class="fas fa-copy"></i> Copy Caption
+                                </button>
+                            </div>
+
+                            <!-- Empty State -->
+                            <div id="emptyState" class="empty-state">
+                                <i class="fas fa-inbox"></i>
+                                <p>Upload an image to get started</p>
+                            </div>
+
+                            <!-- Error State -->
+                            <div id="errorState" class="alert alert-danger d-none" role="alert">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <span id="errorText"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="container-lg">
+                    <div class="footer-content">
+                        <p class="mb-0">
+                            <strong>AI Image Caption Generator v2.0</strong>
+                            <br>
+                            <small>Built with InceptionV3 + LSTM | Powered by TensorFlow & Flask</small>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
