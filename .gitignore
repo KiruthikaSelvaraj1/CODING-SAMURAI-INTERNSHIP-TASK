@@ -1,0 +1,51 @@
+# Git ignore for CODING-SAMURAI-INTERNSHIP-TASK
+# Dependencies
+.venv/
+venv/
+env/
+pipenv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.mo
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+.coverage
+coverage.xml
+*.cover
+.hypothesis/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Logs
+logs/
+*.log
+
+# Temp files
+.DS_Store
+Thumbs.db
+temp_repo/
+README_clean.md
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# OS
+*~
+.DS_Store
+
+# Project specific
+2projctemtional/
+push_log.txt
+Project1-Chatbot/__pycache__/
