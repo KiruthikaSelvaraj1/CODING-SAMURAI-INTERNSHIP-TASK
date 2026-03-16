@@ -54,10 +54,8 @@ self.support_responses = {
 
 - Python 3.x installed on your system
 
-###No external dependencies required - uses only Python standard library modules (datetime, random, re)Install required dependencies:
-```bash
-pip install -r requirements.txt
-```
+No external dependencies required - uses only Python standard library modules (datetime, random, re).
+
 
 ### Running the Chatbot
 
