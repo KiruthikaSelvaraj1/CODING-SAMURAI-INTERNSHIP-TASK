@@ -1,4 +1,4 @@
-# Project 3: AI for Predicting Stock Prices - Advanced Deep Learning Model
+# Project 3: AI for Predicting Stock Prices 
 
 A comprehensive project demonstrating advanced machine learning techniques for predicting stock prices based on historical data. This project implements **LSTM neural networks** and **deep learning** with emphasis on **time series analysis** and **evaluation metrics**.
 
